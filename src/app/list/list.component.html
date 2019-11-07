@@ -1,0 +1,11 @@
+<h1>Breweries</h1>
+
+<!-- *ngIf to only show the UL element if brews exists -->
+<ul *ngIf="brews">
+    <li *ngFor="let brew of brews">
+        <!-- Checking if there is brews in data -->
+        <p class="name">{{ brew.name }}</p>
+        <p class="country">{{ brew.country }}</p>
+        <a class="site" href="{{ brew.website_url }}">site</a>
+    </li>
+</ul>
